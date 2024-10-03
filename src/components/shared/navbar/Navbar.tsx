@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
@@ -45,27 +46,26 @@ const Navbar = () => {
 
     // Array for navigation links
     const navLinks = [
-        { name: 'Home', href: '#' },
-        { name: 'Team', href: '#' },
-        { name: 'Feature', href: '#' },
-        { name: 'Blog', href: '#' },
-        { name: 'About', href: '#' },
-        { name: 'Contact', href: '#' }
+        { name: 'Home', href: '/' },
     ];
 
     return (
         <header className='flex shadow-md py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
             <div className='flex flex-wrap items-center justify-between gap-5 w-full'>
-                <a href="#">
-                    <img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-36' />
-                </a>
+                <Link href="/">
+                    <div className="flex items-center gap-2">
+                        <img src="https://cdn-icons-png.freepik.com/256/1487/1487577.png?ga=GA1.1.1880465971.1727625643&semt=ais_hybrid" alt="logo" className='w-8' />
+                        <p className="text-lg font-bold">power<span className="text-primary">GYM</span></p>
+                    </div>
+
+                </Link>
 
                 <div
                     id="collapseMenu"
                     className={`lg:!block ${toggle ? 'block w-fit' : 'hidden'} max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50`}
                 >
                     <div ref={ref}>
-                        <ul 
+                        <ul
                             className='lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
                             <li className='mb-6 hidden max-lg:block'>
                                 <a href="#">
@@ -75,13 +75,13 @@ const Navbar = () => {
                             {/* Map through navigation links */}
                             {navLinks.map((link, index) => (
                                 <li key={index} className='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
-                                    <a
+                                    <Link
                                         href={link.href}
                                         className={`block font-semibold text-[15px] ${activeNav === link.name ? 'text-[#007bff]' : 'text-gray-500'} hover:text-[#007bff]`}
                                         onClick={() => handleActiveNav(link.name)}
                                     >
                                         {link.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
