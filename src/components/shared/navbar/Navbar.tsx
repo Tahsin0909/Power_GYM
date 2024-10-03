@@ -51,7 +51,7 @@ const Navbar = () => {
     ];
 
     return (
-        <header className='flex shadow-md py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
+        <header className='flex shadow-md py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50 body_padding'>
             <div className='flex flex-wrap items-center justify-between gap-5 w-full'>
                 <Link href="/" className="group">
                     <div className="flex items-center gap-2">

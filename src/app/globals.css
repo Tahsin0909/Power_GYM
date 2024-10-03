@@ -3,3 +3,8 @@
 @tailwind utilities;
 
 
+
+.body_padding{
+  padding: 0px 30px;
+
+}
