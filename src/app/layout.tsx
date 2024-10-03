@@ -4,7 +4,7 @@ import Navbar from "@/components/shared/navbar/Navbar";
 import { Roboto } from 'next/font/google'
 
 
- 
+
 const roboto = Roboto({
   weight: ['400', '700'],
   subsets: ['latin'],
@@ -26,9 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning={true}
         className={` antialiased ${roboto.className}`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>
