@@ -53,7 +53,7 @@ const Navbar = () => {
     return (
         <header className='flex shadow-md py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50 body_padding'>
             <div className='flex flex-wrap items-center justify-between gap-5 w-full'>
-                <Link href="/" className="group">
+                <Link href="/" className={`group ${toggle ? 'hidden' : 'block'}`}>
                     <div className="flex items-center gap-2">
                         <img src="https://cdn-icons-png.freepik.com/256/1487/1487577.png?ga=GA1.1.1880465971.1727625643&semt=ais_hybrid" alt="logo" className='w-8' />
                         <p className="text-lg font-bold">power<span className="text-primary group-hover:text-secondary">GYM</span></p>
@@ -97,7 +97,7 @@ const Navbar = () => {
                         <span className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out rounded-rounded_secondary"></span>
                         <span className="absolute inset-0 bg-primary transition-all duration-300 ease-in-out group-hover:translate-x-full rounded-rounded_secondary"></span>
                         <span className="relative z-10 flex items-center gap-2  text-white text-sm">
-                            <LogIn />
+                            <LogIn size={20}/>
                             Log in
                         </span>
                     </button>
@@ -105,7 +105,7 @@ const Navbar = () => {
                         <span className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out rounded-rounded_secondary"></span>
                         <span className="absolute inset-0 bg-primary transition-all duration-300 ease-in-out group-hover:-translate-x-full rounded-rounded_secondary"></span>
                         <span className="relative z-10 flex items-center gap-2 text-white text-sm">
-                            <LogOut />
+                            <LogOut size={20}/>
                             Log out
                         </span>
                     </button>

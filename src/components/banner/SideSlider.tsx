@@ -17,16 +17,19 @@ interface SliderProps {
   images: string[];
 }
 
-export default function Slider({ images }: SliderProps) {
+export default function SideSlider({ images }: SliderProps) {
   return (
     <>
       <Swiper
-        spaceBetween={30}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
         className="mySwiper"
+        autoplay={{
+          delay: 2000, 
+          disableOnInteraction: false,
+        }}
       >
         {
           images?.map((image, idx) => (

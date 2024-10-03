@@ -4,7 +4,20 @@
 
 
 
-.body_padding{
+.body_padding {
   padding: 0px 30px;
+}
 
+/* Tablet devices (768px and below) */
+@media (max-width: 768px) {
+  .body_padding {
+    padding: 0px 20px;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .body_padding {
+    padding: 0px 10px;
+  }
 }
