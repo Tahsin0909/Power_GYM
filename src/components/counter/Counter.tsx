@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React from 'react';
 import CountUp from 'react-countup';
 
 const Counter = () => {
+
     return (
         <div className=" lg:my-40 md:my-20 my-10 lg:p-8 rounded-lg">
             {/* recepies count */}

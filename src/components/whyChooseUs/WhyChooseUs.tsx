@@ -1,12 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
+
+interface Feature {
+    title: string;
+    subtitle: string;
+    imgSrc: string;
+}
+
+
 const WhyChooseUs = () => {
 
-    interface Feature {
-        title: string;
-        subtitle: string;
-        imgSrc: string;
-    }
 
     const features: Feature[] = [
         {
@@ -30,7 +33,6 @@ const WhyChooseUs = () => {
             imgSrc: "https://cdn-icons-png.freepik.com/256/3475/3475847.png?ga=GA1.1.1880465971.1727625643&semt=ais_hybrid",
         },
     ];
-
 
 
     return (
