@@ -93,11 +93,11 @@ const ServicesSlider = () => {
                 {/* Loop through the colors array to create slides */}
                 {services.map((service, index) => (
                         <SwiperSlide key={index} className='overview_swiper flex items-center rounded-lg'>
-                            <div className={`w-full rounded-lg transition-all duration-300 flex justify-center items-center ${activeIndex === index ? 'h-full' : 'md:h-80 h-48'}`}>
-                                <div className="relative rounded-lg group cursor-pointer overflow-hidden duration-500 md:w-[350px] w-[300px] h-[350px] md:h-[400px] bg-zinc-800 text-gray-50">
-                                    <div className="group-hover:scale-110 duration-500">
+                            <div className={`w-full rounded-lg transition-all duration-300 flex justify-center items-center  ${activeIndex === index ? 'h-full' : 'md:h-80 h-48'}`}>
+                                <div className="relative rounded-lg group cursor-pointer overflow-hidden duration-500  bg-zinc-800 text-gray-50 md:w-[350px] w-[300px] h-full">
+                                    <div className="group-hover:scale-110 duration-500 h-full">
                                         <img
-                                            className='md:w-[350px] w-[300px] h-[350px] md:h-[400px] object-fill'
+                                            className='md:w-[350px] w-[300px] h-full object-fill'
                                             src={service.imgSrc}
                                             alt={service.title}
                                         />
@@ -120,15 +120,15 @@ const ServicesSlider = () => {
             </Swiper>
 
             {/* Custom navigation buttons */}
-            <div className='flex gap-4 items-center justify-end md:mt-0 mt-4'>
+            <div className='flex gap-4 items-center justify-end md:mt-0 mt-4 mb-6 lg:mb-0'>
                 {/* Left (Previous) button */}
-                <button className={`${activeIndex > 0 ? "opacity-100" : "opacity-0"} p-3 rounded-full bg-black`}
+                <button className={`${activeIndex > 0 ? "opacity-100" : "opacity-0"} p-3 rounded-full bg-secondary`}
                     onClick={() => swiperInstance?.slidePrev()}>
                     <ChevronLeft className='fill-transparent text-white relative ' />
                 </button>
 
                 {/* Right (Next) button */}
-                <button className={` p-3 rounded-full bg-black`}
+                <button className={` p-3 rounded-full bg-secondary`}
                     onClick={() => swiperInstance?.slideNext()}>
                     <ChevronRight className='fill-transparent text-white relative ' />
                 </button>

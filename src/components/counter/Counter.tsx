@@ -6,7 +6,7 @@ import CountUp from 'react-countup';
 
 const Counter = () => {
     return (
-        <div className=" lg:my-28 md:my-16 my-10 lg:p-8 rounded-lg">
+        <div className=" lg:my-40 md:my-20 my-10 lg:p-8 rounded-lg">
             {/* recepies count */}
             <div className=" flex flex-col md:flex-row gap-4 md:gap-0 justify-evenly items-center">
                 <div className=" p-4 lg:w-[15vw] lg:h-[20vh] md:w-[25vw] text-nowrap w-[60vw] flex flex-col justify-center items-center shadow-2xl rounded-md bg-primary hover:bg-secondary">
