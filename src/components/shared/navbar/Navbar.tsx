@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
+import { useGlobalContext } from "@/contextApi/ContextApi";
 import { LogIn, LogOut } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -9,7 +10,7 @@ import { useState, useRef, useEffect } from "react";
 const Navbar = () => {
 
     const router = useRouter()
-
+    const { user } = useGlobalContext();
     // State to control the display of the menu and active navlink
     const [activeNav, setActiveNav] = useState('Home');  // State for active nav
 
@@ -62,7 +63,6 @@ const Navbar = () => {
                         <img src="https://cdn-icons-png.freepik.com/256/1487/1487577.png?ga=GA1.1.1880465971.1727625643&semt=ais_hybrid" alt="logo" className='w-8' />
                         <p className="text-lg font-bold">power<span className="text-primary group-hover:text-secondary">GYM</span></p>
                     </div>
-
                 </Link>
 
                 <div
@@ -96,23 +96,26 @@ const Navbar = () => {
                 </div>
 
                 <div className='flex max-lg:ml-auto space-x-3'>
-                    <button onClick={() => router.push('/login')} className="relative flex items-center py-padding_small px-padding_medium rounded-rounded_secondary  overflow-hidden group active:scale-95 transition-all ease-linear">
+                    {
+                        user ? <button onClick={() => router.push('/login')} className="relative flex items-center  py-padding_small px-padding_medium rounded-rounded_secondary  overflow-hidden group active:scale-95 transition-all ease-linear">
+                            <span className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out rounded-rounded_secondary"></span>
+                            <span className="absolute inset-0 bg-primary transition-all duration-300 ease-in-out group-hover:-translate-x-full rounded-rounded_secondary"></span>
+                            <span className="relative z-10 flex items-center gap-2 text-white text-sm">
+                                <LogOut size={20} />
+                                Log out
+                            </span>
+                        </button> : <button onClick={() => router.push('/login')} className="relative flex items-center py-padding_small px-padding_medium rounded-rounded_secondary  overflow-hidden group active:scale-95 transition-all ease-linear">
 
-                        <span className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out rounded-rounded_secondary"></span>
-                        <span className="absolute inset-0 bg-primary transition-all duration-300 ease-in-out group-hover:translate-x-full rounded-rounded_secondary"></span>
-                        <span className="relative z-10 flex items-center gap-2  text-white text-sm">
-                            <LogIn size={20} />
-                            Log in
-                        </span>
-                    </button>
-                    <button onClick={() => router.push('/login')} className="relative flex items-center  py-padding_small px-padding_medium rounded-rounded_secondary  overflow-hidden group active:scale-95 transition-all ease-linear">
-                        <span className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out rounded-rounded_secondary"></span>
-                        <span className="absolute inset-0 bg-primary transition-all duration-300 ease-in-out group-hover:-translate-x-full rounded-rounded_secondary"></span>
-                        <span className="relative z-10 flex items-center gap-2 text-white text-sm">
-                            <LogOut size={20} />
-                            Log out
-                        </span>
-                    </button>
+                            <span className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out rounded-rounded_secondary"></span>
+                            <span className="absolute inset-0 bg-primary transition-all duration-300 ease-in-out group-hover:translate-x-full rounded-rounded_secondary"></span>
+                            <span className="relative z-10 flex items-center gap-2  text-white text-sm">
+                                <LogIn size={20} />
+                                Log in
+                            </span>
+                        </button>
+                    }
+
+
 
                     <button id="toggleOpen" onClick={handleToggle} className='lg:hidden'>
                         <svg className="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

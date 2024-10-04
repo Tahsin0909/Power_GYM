@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
 import { Roboto } from 'next/font/google'
 import { Toaster } from "react-hot-toast";
+import { GlobalContextProvider } from "@/contextApi/ContextApi";
 
 
 
@@ -30,25 +31,28 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={` antialiased ${roboto.className}`}
       >
-        <Navbar />
-        {children}
-        <Toaster
-          toastOptions={{
-            // Define default options
-            style: {
-              background: '#3C8AB5',
-              color: '#fff',
-              fontSize: '14px'
-            },
-            // Default options for specific types
-            success: {
-              iconTheme: {
-                primary: '#F7C05C',
-                secondary: 'white',
+        <GlobalContextProvider>
+          <Navbar />
+          {children}
+          <Toaster
+            toastOptions={{
+              // Define default options
+              style: {
+                background: '#3C8AB5',
+                color: '#fff',
+                fontSize: '14px'
               },
-            },
-          }}
-        />
+              // Default options for specific types
+              success: {
+                iconTheme: {
+                  primary: '#F7C05C',
+                  secondary: 'white',
+                },
+              },
+            }}
+          />
+        </GlobalContextProvider>
+
       </body>
     </html>
   );

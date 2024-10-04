@@ -9,18 +9,19 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
 interface FormData {
+    name: string;
     email: string;
     password: string;
 }
 
-const LogInPage: React.FC = () => {
+const SignUpPage: React.FC = () => {
     // Form handling with react-hook-form
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
-    const { login } = useGlobalContext();
+    const { signUp } = useGlobalContext();
     // Form submit handler
     const onSubmit: SubmitHandler<FormData> = (data) => {
-        const logIn = login(data.email, data.password)
-        if (logIn.res == 200) {
+        const SignUp = signUp(data.email, data.password, data.name)
+        if (SignUp.res == 200) {
             toast.success(`Authenticating as ${data.email}`);
 
         }
@@ -51,14 +52,26 @@ const LogInPage: React.FC = () => {
             {/* Left section with form */}
             <div className="h-full flex border items-center justify-center">
                 <div className="p-padding_base rounded-rounded_primary shadow-md">
-                    <div className="flex items-center gap-2">
-                        <img src="https://cdn-icons-png.freepik.com/256/1487/1487577.png?ga=GA1.1.1880465971.1727625643&semt=ais_hybrid" alt="logo" className='w-8' />
-                        <p className="text-lg font-bold">power<span className="text-primary group-hover:text-secondary">GYM</span></p>
+                    <div className="flex flex-col">
+                        <p className="font-semibold text-text_primary text-primary">Welcome Back!</p>
+                        <p className="mt-m_small text-secondary">Enter your Credentials to access your account</p>
                     </div>
 
                     {/* Form section */}
                     <div className="">
                         <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 gap-gap_base mt-m_lg">
+                            {/* name input */}
+                            <div className="flex flex-col space-y-1 border p-input_padding focus-within:border-primary rounded-rounded_primary bg-white">
+                                <label className="text-text_small text-gray-500">Full Name</label>
+                                <input
+                                    {...register('name', { required: true })}
+                                    type="text"
+                                    placeholder="John Doe"
+                                    className="focus:outline-none"
+                                />
+                                {/* Error message for email */}
+                                {errors.name && <span className="text-error text-xs mt-m_small">Please enter your name</span>}
+                            </div>
                             {/* Email input */}
                             <div className="flex flex-col space-y-1 border p-input_padding focus-within:border-primary rounded-rounded_primary bg-white">
                                 <label className="text-text_small text-gray-500">Email address</label>
@@ -124,9 +137,9 @@ const LogInPage: React.FC = () => {
                             </button>
                         </form>
                     </div>
-                    {/* Link to sign-up LogInPage */}
+                    {/* Link to sign-up SignUpPage */}
                     <p className="text-gray-800 text-sm mt-m_secondary text-center font-semibold">
-                        Don&apos;t Have an account? <Link href="/signUp" className="text-primary font-semibold hover:underline ml-1">Sign Up</Link>
+                        Don&apos;t Have an account? <Link href="/login" className="text-primary font-semibold hover:underline ml-1">Log In</Link>
                     </p>
                 </div>
 
@@ -135,4 +148,4 @@ const LogInPage: React.FC = () => {
     );
 };
 
-export default LogInPage;
+export default SignUpPage;
