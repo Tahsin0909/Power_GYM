@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
 
 
     return (
-        <div className="lg:my-28 md:my-16 my-10 lg:flex justify-evenly items-center body-padding">
+        <div className="lg:my-28 md:my-16 my-10 lg:flex justify-between items-center body_padding">
             {/* title and subtitle  */}
             <div className="lg:space-y-4 space-y-2">
                 <p className="lg:text-3xl md:text-2xl text-lg lg:text-start text-center  text-primary">Why Choose Us</p>

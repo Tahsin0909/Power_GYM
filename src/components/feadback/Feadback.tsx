@@ -42,7 +42,7 @@ const FeedBack = () => {
                 <Swiper pagination={true} modules={[Pagination]} className="mySwiper lg:mt-20 md:mt-14 mt-10 w-[80vw] lg:w-[50vw] md:w-[70vw] mx-auto flex justify-center items-center" >
                     {
                         testimonials.map((data, idx) => <SwiperSlide key={idx} className="flex flex-col justify-center items-center mb-4" >
-                            <div className="space-y-4 lg:h-[35vh] h-[40vh]  lg:p-8  p-4 rounded-lg mb-4 shadow-md bg-[#f7f6ec]">
+                            <div className="space-y-4 lg:h-[35vh] h-[40vh]  lg:p-8  p-4 rounded-lg mb-4 shadow-md bg-secondary_v_shadow">
                                 <div className="flex gap-2 items-center">
                                     <img src={data.photoUrl} alt="" className="md:w-16 w-8 md:h-16 h-8 rounded-full" />
                                     <div>

@@ -5,19 +5,35 @@
 
 
 .body_padding {
-  padding: 0px 30px;
+  padding: 0px 50px !important;
 }
+
+
+.overview_swiper{
+  width: 330px !important;
+  height: 425px !important;
+}
+
+
 
 /* Tablet devices (768px and below) */
 @media (max-width: 768px) {
   .body_padding {
-    padding: 0px 20px;
+    padding: 0px 20px !important;
+  }
+  .overview_swiper{
+    width: 330px !important;
+    height: 425px !important;
   }
 }
 
 /* Mobile devices (480px and below) */
 @media (max-width: 480px) {
   .body_padding {
-    padding: 0px 10px;
+    padding: 0px 10px !important;
+  }
+  .overview_swiper{
+    width: 220px !important;
+    height: 275px !important;
   }
 }

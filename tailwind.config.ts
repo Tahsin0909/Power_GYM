@@ -9,12 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#5CB8F7',
+        // #5CB8F 
+        primary: '#3C8AB5',
         secondary: '#F7C05C',
-        activeNav: "#F8F8F8",
-        footer_link: "#81859F",
-        error: "#ef4444",
-        discount: "#B92E2E"
+        secondary_v_shadow: '#FBE1B0',
       },
       margin: {
         m_small: '4px',
