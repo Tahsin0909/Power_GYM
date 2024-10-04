@@ -3,9 +3,13 @@
 
 import { LogIn, LogOut } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
+
+    const router = useRouter()
+
     // State to control the display of the menu and active navlink
     const [activeNav, setActiveNav] = useState('Home');  // State for active nav
 
@@ -92,20 +96,20 @@ const Navbar = () => {
                 </div>
 
                 <div className='flex max-lg:ml-auto space-x-3'>
-                    <button className="relative flex items-center py-padding_small px-padding_medium rounded-rounded_secondary  overflow-hidden group active:scale-95 transition-all ease-linear">
+                    <button onClick={() => router.push('/login')} className="relative flex items-center py-padding_small px-padding_medium rounded-rounded_secondary  overflow-hidden group active:scale-95 transition-all ease-linear">
 
                         <span className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out rounded-rounded_secondary"></span>
                         <span className="absolute inset-0 bg-primary transition-all duration-300 ease-in-out group-hover:translate-x-full rounded-rounded_secondary"></span>
                         <span className="relative z-10 flex items-center gap-2  text-white text-sm">
-                            <LogIn size={20}/>
+                            <LogIn size={20} />
                             Log in
                         </span>
                     </button>
-                    <button className="relative flex items-center  py-padding_small px-padding_medium rounded-rounded_secondary  overflow-hidden group active:scale-95 transition-all ease-linear">
+                    <button onClick={() => router.push('/login')} className="relative flex items-center  py-padding_small px-padding_medium rounded-rounded_secondary  overflow-hidden group active:scale-95 transition-all ease-linear">
                         <span className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out rounded-rounded_secondary"></span>
                         <span className="absolute inset-0 bg-primary transition-all duration-300 ease-in-out group-hover:-translate-x-full rounded-rounded_secondary"></span>
                         <span className="relative z-10 flex items-center gap-2 text-white text-sm">
-                            <LogOut size={20}/>
+                            <LogOut size={20} />
                             Log out
                         </span>
                     </button>

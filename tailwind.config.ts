@@ -13,6 +13,7 @@ const config: Config = {
         primary: '#3C8AB5',
         secondary: '#F7C05C',
         secondary_v_shadow: '#FBE1B0',
+        error: '#ef4444 ',
       },
       margin: {
         m_small: '4px',

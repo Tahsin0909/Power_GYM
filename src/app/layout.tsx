@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
 import { Roboto } from 'next/font/google'
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -31,6 +32,23 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Toaster
+          toastOptions={{
+            // Define default options
+            style: {
+              background: '#3C8AB5',
+              color: '#fff',
+              fontSize: '14px'
+            },
+            // Default options for specific types
+            success: {
+              iconTheme: {
+                primary: '#F7C05C',
+                secondary: 'white',
+              },
+            },
+          }}
+        />
       </body>
     </html>
   );
