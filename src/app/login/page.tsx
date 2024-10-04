@@ -51,9 +51,10 @@ const LogInPage: React.FC = () => {
             {/* Left section with form */}
             <div className="h-full flex border items-center justify-center">
                 <div className="p-padding_base rounded-rounded_primary shadow-md">
-                    <div className="flex items-center gap-2">
-                        <img src="https://cdn-icons-png.freepik.com/256/1487/1487577.png?ga=GA1.1.1880465971.1727625643&semt=ais_hybrid" alt="logo" className='w-8' />
-                        <p className="text-lg font-bold">power<span className="text-primary group-hover:text-secondary">GYM</span></p>
+
+                    <div className="flex flex-col">
+                        <p className="font-semibold text-text_primary text-primary">Welcome Back!</p>
+                        <p className="mt-m_small text-secondary">Enter your Credentials to access your account</p>
                     </div>
 
                     {/* Form section */}
