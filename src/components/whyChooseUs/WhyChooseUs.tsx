@@ -8,7 +8,7 @@ interface Feature {
 }
 
 
-const WhyChooseUs = () => {
+const WhyChooseUs: React.FC = () => {
 
 
     const features: Feature[] = [

@@ -1,5 +1,6 @@
 'use client'
 
+import React from "react";
 import ServicesSlider from "./ServicesSlider";
 
 
@@ -8,7 +9,7 @@ import ServicesSlider from "./ServicesSlider";
 
 
 
-const Services = () => {
+const Services: React.FC = () => {
     return (
         <div className="lg:mt-72 md:mt-20 mt-10">
             <div className="body_padding bg-primary ">
