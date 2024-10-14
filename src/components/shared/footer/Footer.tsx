@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <footer className=" md:!pt-padding_lg lg:!pb-padding_lg !pt-20 body_padding bg-black text-white">
             {/* Main footer container with grid layout */}
