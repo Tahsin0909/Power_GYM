@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
 
     const router = useRouter()
     const { user } = useGlobalContext();
