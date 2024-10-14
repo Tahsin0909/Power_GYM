@@ -10,7 +10,7 @@ const sideImage = ["https://img.freepik.com/free-psd/flat-design-gym-template_23
 
 
 
-const Banner = () => {
+const Banner: React.FC = () => {
     return (
         <div className="relative">
             <div className=" grid grid-cols-3">

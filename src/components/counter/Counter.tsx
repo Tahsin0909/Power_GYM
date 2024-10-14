@@ -3,7 +3,7 @@
 
 import CountUp from 'react-countup';
 
-const Counter = () => {
+const Counter: React.FC = () => {
 
     return (
         <div className=" lg:my-40 md:my-20 my-10 lg:p-8 rounded-lg">

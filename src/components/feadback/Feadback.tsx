@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import Title from "../shared/title/Title";
 // import CountUp from "react-countup/build/CountUp";
-const FeedBack = () => {
+const FeedBack: React.FC = () => {
 
 
     const testimonials = [
