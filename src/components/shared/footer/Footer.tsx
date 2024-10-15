@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
+import Ratings from "@/components/ratinngs/Ratings";
 import Link from "next/link";
 
 
@@ -8,6 +9,7 @@ const Footer: React.FC = () => {
     return (
         <footer className=" md:!pt-padding_lg lg:!pb-padding_lg !pt-20 body_padding bg-black text-white">
             {/* Main footer container with grid layout */}
+
             <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 items-start lg:mb-m_xl md:mb-m_lg mb-m_primary lg:gap-0 md:gap-8 gap-6">
                 {/* Company logo and name */}
                 <Link href="/" className={`group block col-span-2 md:mt-0 mt-10`}>
@@ -75,6 +77,8 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <p className=" text-center  hover:text-secondary mt-m_lg md:pb-0 pb-4">PG © 2024. All rights reserved.</p>
+            <Ratings  totalRatings={5} ratted={4} />
+
         </footer>
     );
 };

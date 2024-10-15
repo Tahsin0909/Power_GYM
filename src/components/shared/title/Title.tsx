@@ -6,7 +6,7 @@ type propTypes = {
     subtitle: string;
 }
 
-const Title = ({ title, subtitle }: propTypes) => {
+const Title = ({ title, subtitle }: propTypes) : JSX.Element => {
     return (
         <div className="text-center md:space-y-4 space-y-2">
             <p className='lg:text-3xl md:text-2xl text-lg font-bold text-primary'><span>&quot;</span> {title} <span>&quot;</span></p>
