@@ -78,6 +78,33 @@ const Footer: React.FC = () => {
             </div>
             <p className=" text-center  hover:text-secondary mt-m_lg md:pb-0 pb-4">PG © 2024. All rights reserved.</p>
             <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
 
         </footer>
     );
