@@ -105,6 +105,31 @@ const Footer: React.FC = () => {
             <Ratings  totalRatings={5} ratted={4} />
             <Ratings  totalRatings={5} ratted={4} />
             <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
+            <Ratings  totalRatings={5} ratted={4} />
 
         </footer>
     );
