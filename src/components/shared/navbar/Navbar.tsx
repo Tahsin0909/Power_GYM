@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
+import Ratings from "@/components/ratinngs/Ratings";
 import { useGlobalContext } from "@/contextApi/ContextApi";
 import { LogIn, LogOut } from "lucide-react";
 import Link from "next/link";
@@ -115,6 +116,7 @@ const Navbar: React.FC = () => {
                         </button>
                     }
 
+                    <Ratings totalRatings={5} ratted={4} />
 
 
                     <button id="toggleOpen" onClick={handleToggle} className='lg:hidden'>
