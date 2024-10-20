@@ -9,7 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // #5CB8F 
         primary: '#3C8AB5',
         secondary: '#F7C05C',
         secondary_v_shadow: '#FBE1B0',
