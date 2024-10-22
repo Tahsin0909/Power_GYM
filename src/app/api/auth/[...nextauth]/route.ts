@@ -9,7 +9,7 @@ const handler = NextAuth({
     providers: [
         Credentials({
             credentials: {
-                email: { label: "Email", type: 'text', required: true, placeholder: 'Your Email' },
+                email: { label: "Email", type: 'email', required: true, placeholder: 'Your Email' },
                 password: { label: "Password", type: 'password', required: true, placeholder: 'Your Password' }
             },
             async authorize(credentials) {

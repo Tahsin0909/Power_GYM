@@ -54,6 +54,7 @@ const Navbar: React.FC = () => {
     // Array for navigation links
     const navLinks = [
         { name: 'Home', href: '/' },
+        { name: 'Class', href: '/class' },
     ];
 
     return (
