@@ -11,3 +11,8 @@ export const POST = async () =>{
         currentTime : new Date().toLocaleDateString()
     })
 }
+export const PATCH = async () =>{
+    return Response.json({
+        currentTime : new Date().toLocaleDateString()
+    })
+}
