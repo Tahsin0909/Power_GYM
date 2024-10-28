@@ -16,3 +16,8 @@ export const PATCH = async () =>{
         currentTime : new Date().toLocaleDateString()
     })
 }
+export const DELETE = async () =>{
+    return Response.json({
+        currentTime : new Date().toLocaleDateString()
+    })
+}
