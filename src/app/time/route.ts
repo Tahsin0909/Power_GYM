@@ -21,3 +21,8 @@ export const DELETE = async () =>{
         currentTime : new Date().toLocaleDateString()
     })
 }
+export const PUT = async () =>{
+    return Response.json({
+        currentTime : new Date().toLocaleDateString()
+    })
+}
