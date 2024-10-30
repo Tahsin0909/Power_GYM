@@ -21,8 +21,4 @@ export const DELETE = async () =>{
         currentTime : new Date().toLocaleDateString()
     })
 }
-export const pat = async () =>{
-    return Response.json({
-        currentTime : new Date().toLocaleDateString()
-    })
-}
+
