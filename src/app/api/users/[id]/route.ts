@@ -63,3 +63,16 @@ export const PATCH = async (request: NewUserRequest, { params }: { params: { id:
         users
     });
 };
+export const DELETE = async (request: NewUserRequest, { params }: { params: { id: string } }): Promise<Response> => {
+    const id = params.id
+    const indexUser = users.findIndex((c) => c.id === parseInt(id))
+    users[indexUser] = {
+        id: users[indexUser].id,
+        name: users[indexUser].name,
+        password: "changed pass"
+    }
+    return Response.json({
+        message: "user added",
+        users
+    });
+};
