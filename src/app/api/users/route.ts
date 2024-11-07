@@ -47,3 +47,17 @@ export const GET = async (request: NewUserRequest): Promise<Response> => {
         users
     });
 };
+export const wr = async (request: NewUserRequest): Promise<Response> => {
+    const newUsers = await request.json(); // Await the JSON parsing
+
+    users.push({
+        id: users.length + 1,  // Incrementing id based on the existing users' length
+        name: newUsers.name,
+        password: newUsers.password
+    });
+
+    return Response.json({
+        message: "user added",
+        users
+    });
+};
